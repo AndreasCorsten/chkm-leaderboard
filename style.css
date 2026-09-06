@@ -1,0 +1,262 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #1a1a1a;
+    background-color: #F2F4F7;
+  }
+  
+  #tabs {
+    display: flex;
+    border-bottom: 2px solid #1A2744;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  
+  #leaderboard-container {
+    background-color: #ffffff;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    margin-top: 0;
+  }
+  
+  #header-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  #logo {
+    width: 60px;
+    display: block;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  
+  h1 {
+    color: #1A2744;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #1A2744;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Oswald', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  tr:hover {
+    background-color: #f5f7fa;
+  }
+  
+  td:first-child,
+  td:nth-child(2) {
+    font-weight: bold;
+  }
+  
+  .rank-1 {
+    background-color: #F0D680;
+    color: #6B5900;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  .rank-2 {
+    background-color: #CFCFCF;
+    color: #4D4D4D;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  .rank-3 {
+    background-color: #E0BE94;
+    color: #74472C;
+    font-weight: bold;
+    border-radius: 6px;
+  }
+  
+  #tabs {
+    display: flex;
+    border-bottom: 2px solid #1A2744;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 12px 16px;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background-color: #d9e1f2;
+    color: #1A2744;
+    cursor: pointer;
+  }
+  
+  .tab-button.active {
+    background-color: #1A2744;
+    color: #ffffff;
+  }
+  
+  .athlete-names {
+    font-size: 50%;
+    color: #666666;
+    font-weight: normal;
+    margin-top: 2px;
+  }
+
+  .team-row {
+    cursor: pointer;
+  }
+  
+  .team-row:hover {
+    background-color: #f5f7fa;
+  }
+  
+  .detail-row {
+    display: none;
+  }
+  
+  .detail-row.open {
+    display: table-row;
+  }
+  
+  .detail-row td {
+    background-color: #f8f9fb;
+    padding: 16px;
+  }
+  
+  .detail-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .detail-item {
+    min-width: 0;
+  }
+  
+  .detail-label {
+    font-size: 12px;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .detail-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A2744;
+  }
+
+  td:first-child {
+    text-align: center;
+  }
+
+  .skeleton-row {
+    height: 40px;
+    margin: 12px 16px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: skeleton-pulse 1.5s infinite;
+  }
+  
+  @keyframes skeleton-pulse {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  .error-message {
+    text-align: center;
+    padding: 40px 20px;
+    color: #8B2E2E;
+  }
+  
+  .error-message h3 {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  #last-updated {
+    text-align: left;
+    font-size: 12px;
+    color: #999999;
+    margin: 8px 4px 0 0;
+  }
+
+  .animate-unfold {
+    animation: unfold 0.3s ease;
+    transform-origin: top;
+  }
+  
+  @keyframes unfold {
+    from {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  .movement {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 4px;
+  }
+  
+  .movement-up {
+    color: #2E7D32;
+  }
+  
+  .movement-down {
+    color: #C62828;
+  }
+  
+  @media (max-width: 480px) {
+    .tab-button {
+      font-size: 11px;
+      padding: 10px 4px;
+      letter-spacing: 0;
+    }
+  
+    #header-bar {
+      gap: 10px;
+    }
+  
+    h1 {
+      font-size: 22px;
+    }
+  
+    #logo {
+      width: 44px;
+    }
+  }

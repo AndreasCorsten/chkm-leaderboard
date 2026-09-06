@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>CHKM 2026 - Leaderboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-bar">
+    <img src="logo.png" alt="CHKM 2026 logo" id="logo">
+    <h1>CHKM 2026 - Leaderboard</h1>
+    </div>
+    
+
+    <div id="tabs">
+        <button class="tab-button active" data-division="Herre RX">Herre RX</button>
+        <button class="tab-button" data-division="Dame RX">Dame RX</button>
+        <button class="tab-button" data-division="Herre Scaled">Herre Scaled</button>
+        <button class="tab-button" data-division="Dame Scaled">Dame Scaled</button>
+      </div>
+      
+      <div id="leaderboard-container">
+        <div class="skeleton-row"></div>
+        <div class="skeleton-row"></div>
+        <div class="skeleton-row"></div>
+        <div class="skeleton-row"></div>
+      </div>
+
+      <p id="last-updated"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
